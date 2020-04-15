@@ -5,6 +5,15 @@ Manapság a Star Wars egy hatalmas univerzum, ami egy hatalmas rajongó táborra
 3. Vágyálom rendszer leírása
 A cél egy olyan weboldal készítése, amely feltünteti a Star Wars univerzum összes élőlényét, bolygóját és űrhajóit, valamint a különböző fegyvereket is. Mind ezek mellett pedig még az, hogy rövid leírást adjon a filmekről és sorozatokról. Valamint még az, hogy lista szerűen felsorolja az eddig megjelent játékokat. Minden képen úgy kell elkészíteni az oldalt, hogy a létrehozott élőlények, bolygók, űrhajók és fegyverek táblákban lehessen új adatokat fel vinni, valamint ezeket a táblákat lehessen módosítani, például ha rossz adatokat adtunk meg, illetve törölni adatokat, például ha az élőlények táblában egy olyan élőlény adatait adtuk meg, ami nem is létezik a Star Wars univerzumában. Ezek mellett pedig létrehozni ezeknek a tábláknak külön-külön a listázó oldalát, ahol fel legyenek tüntetve az adatok. A táblákban az minden adathoz legyen egy kép, valamint egy dokumentum, ami az adott dolog általános leírását tartalmazza. A módosításnál legyenek módosíthatók a képek és a dokumentumok is. Minden oldalon legyen egy menü rendszer. A főoldal tartalmazza az egész oldal általános leírását. A külön oldalak legyenek a filmekről és a sorozatokról, amelyek tartalmazzanak rövid leírásokat a filmekről és a sorozatokról, képekkel.
 4. Jelenlegi üzleti folyamatok modellje
+Egy olyan weboldal készítése, amely a Star Wars univerzumával kapcsolatos információk vannak. Az emberek tudják új adatokkal bővíteni az élőlények, bolygók, űrhajók és a fegyverek listáját. Tudják ezeket az adatokat módosítani, törölni és listázni. Ehhez először el kell készíteni adatbázist a szerveren, majd ebben az adatbázisban létrehozni a táblákat, melyekhez megírom a beszúrás, módosítás, törlés és a listázás függvényeket. Majd ezt követően létrehozom a weboldal többi részét, melyeket az emberek már nem módosíthatnak. Ugyanis ezeken a weboldalakon információk lesznek a filmekkel és a sorozatokkal kapcsolatban. Plusz kell majd még egy tábla az adatbázisban, ami fogja tartalmazni az eddig megjelent játékok listáját, ezt is szerkeszthetik az emberek.
 5. Igényelt üzleti folyamatok modellje
+Egy weboldal készítése, amely információkat tartalmaz a Star Wars világáról. A weboldal megfelel a leírt követelményeknek.
 6. Követelménylista
+-adatbázis létre hozása a szerver oldalon
+-adatbázisban létrehozni a táblákat
+-az élőlényeket szét bontani fajok szerint
+-a fegyvereket szét bontani típusok szerint
+-az űrhajókat szét bontani típusok szerint
+-létrehozni az információs oldalakat
 7. Fogalomszótár
+A fejlesztés során folyamatosan bővülni fog ...
