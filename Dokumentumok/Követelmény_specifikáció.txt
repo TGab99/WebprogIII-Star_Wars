@@ -14,4 +14,9 @@ Egy weboldal készítése, amely információkat tartalmaz a Star Wars világár
 -az űrhajókat szét bontani típusok szerint
 -létrehozni az információs oldalakat
 6. Irányított és szabad szöveges riportok
+-Irányított riport
+A weboldal a megadott határidőn belül elfogom készíteni, dokumentációkkal és képernyőtervekkel együtt.
+-Szabad riport
+Cél egy olyan weboldal létrehozása, amely információkat tartalmaz a Star Wars univerzumáról.
 7. Fogalomszótár
+A fejlesztés során folyamatosan bővül ...
