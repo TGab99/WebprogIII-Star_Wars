@@ -1,7 +1,42 @@
 1. A rendszer célja
+Maga a weboldal a Star Wars világáról fog információkat tartalmazni. Listaként megfogja jeleníteni a különböző élőlényeket, bolygókat, űrhajókat és fegyvereket, valamint az eddig megjelent játékokat. Ezeket az emberek fogják tudni módosítani, törölni az adatokat, kilistázni őket, valamint újabb adatokkal bővíteni a listákat. Plusz információkat fog még tartalmazni a filmekről és sorozatokról, amiket nem lehet módosítani.
 2. Projekt terv
+A weblap elkészítéséhez 4 hét áll.
+	Mérföldkövek:
+		- Követelmény specifikáció elkészítése
+		- Funkcionális specifikáció elkészítése
+		- Rendszerterv elkészítése
+		- Képernyő tervek készítése
+		- Adatbázis létrehozása
+		- táblák létrehozása
+		- táblák feltöltése adatokkal
+		- megírni a metódusokat
+		- létrehozni a filmekről és sorozatokról szóló külön-külön az oldalakat
+		- design elkészítése
 3. Üzleti folyamatok modellje
+	- Üzleti szereplők : Megrendelő: Balla Tamás
+			     Forgalmazók és tulajdonosok: Török Gabriella
+
+  	- Üzleti folyamatok :Tevékenység alapú költség számítás: 
+			      - Vásárlás: Balla Tamás
+			      - Szolgáltatás lefoglalása: Balla Tamás
+			      - Reklámozás: Nincs szponzor, nem engedélyezett
+			      - Értékesítés: nem értékesíthető
+			      - Szolgáltatás: folyamatos frissítések
+			      - Üzemeltetés: Támogatom az üzemeltetést, ellátom az ahhoz kapcsolódó feladatokat.
+					     
+  	- Üzleti entitások :  - Áru: nem forgalmazható
+			      - Pénz: üzleti célokra nem bocsátható
+			      - Iroda: Eszterházy Károly Egyetem C épülete
+			      - Üzlethelység: Eszterházy Károly Egyetem
+			      - Reklám: Nem engedélyezett
 4. Követelmények
+	-adatbázis létre hozása a szerver oldalon
+	-adatbázisban létrehozni a táblákat
+	-az élőlényeket szét bontani fajok szerint
+	-a fegyvereket szét bontani típusok szerint
+	-az űrhajókat szét bontani típusok szerint
+	-létrehozni az információs oldalakat
 5. Funkcionális terv
 6. Fizikai környezet
 7. Absztrakt domain modell
