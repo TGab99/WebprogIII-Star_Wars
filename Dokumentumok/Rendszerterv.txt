@@ -38,10 +38,10 @@ A weblap elkészítéséhez 4 hét áll.
 	-az űrhajókat szét bontani típusok szerint
 	-létrehozni az információs oldalakat
 5. Funkcionális terv
+A főoldalon legyen egy menü, amely segítségével a felhasználók tudnak navigálni a lapok között. Az élőlényeknek, űrhajóknak, bolygóknak és a fegyvereknek, valamint a játékoknak legyenek külön-külön táblái az adatbázisban. Ezeket a felhasználók tudják szerkeszteni, listázni, törölni, valamint új még meg nem lévő adatokat hozzáadni. Az eddig megjelent filmekről és sorozatokról is legyenek külön-külön lapok, melyeken információk legyenek az adott filmről vagy sorozatról kapcsolódóan. Ezeket a felhasználok ne tudják szerkeszteni.
 6. Fizikai környezet
-7. Absztrakt domain modell
-8. Architekturális terv
-9. Adatbázis terv
-10. Implementációs terv
-11. Tesztterv
-12. Karbantartási terv
+NetBeans-ben a CodeIgniter keretrendszert felhasználva lesz elkészítve a weboldal. A felhasznált nyelvek: PHP, HTML és CSS.
+7. Adatbázis terv
+Folyamatban ...
+8. Implementációs terv
+Folyamatban ...
