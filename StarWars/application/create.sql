@@ -1,0 +1,150 @@
+set old_passwords=0;
+DROP USER IF EXISTS 'starwars'@'localhost';
+CREATE USER 'starwars'@'localhost' 
+    IDENTIFIED BY 'May251977';
+GRANT USAGE ON *.* TO 'starwars'@'localhost'
+REQUIRE NONE WITH 
+MAX_QUERIES_PER_HOUR 0 
+MAX_CONNECTIONS_PER_HOUR 0 
+MAX_UPDATES_PER_HOUR 0 
+MAX_USER_CONNECTIONS 0;
+
+DROP DATABASE IF EXISTS `starwars`;
+CREATE DATABASE IF NOT EXISTS `starwars`;
+GRANT SELECT, INSERT, UPDATE, DELETE 
+ON `starwars`.* TO 'starwars'@'localhost';
+ 
+USE `starwars`;
+
+CREATE TABLE IF NOT EXISTS ci_sessions(
+    `id` varchar(128) NOT NULL,
+    `ip_address` varchar(45) NOT NULL,
+    `timestamp` int(10) unsigned DEFAULT 0 NOT NULL,
+    `data` blob NOT NULL,
+     CONSTRAINT PK_ci_sessions PRIMARY KEY(id),
+     KEY `ci_sessions_timestamp` (`timestamp`)
+);
+
+CREATE TABLE IF NOT EXISTS jedi(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    homeworld VARCHAR(250) NOT NULL,
+    species VARCHAR(250) NOT NULL,
+    gender VARCHAR(250) NOT NULL,
+    rank VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+    file VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_jedi PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS sith(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    homeworld VARCHAR(250) NOT NULL,
+    species VARCHAR(250) NOT NULL,
+    gender VARCHAR(250) NOT NULL,
+    rank VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+    file VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_sith PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS droid(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    homeworld VARCHAR(250) NOT NULL,
+    creator VARCHAR(250) NOT NULL,
+    model VARCHAR(250) NOT NULL,
+    class VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+    file VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_droid PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS planets(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    regio VARCHAR(250) NOT NULL,
+    sector VARCHAR(250) NOT NULL,
+    system VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+    file VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_planets PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS weapons(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    type VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+    file VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_weapons PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS vehicles(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    model VARCHAR(250) NOT NULL,
+    class VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+    file VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_vehicles PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS species(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+    file VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_species PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS senators(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    homeworld VARCHAR(250) NOT NULL,
+    species VARCHAR(250) NOT NULL,
+    gender VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+    file VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_senators PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS games(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    developres VARCHAR(250) NOT NULL,
+    publishers VARCHAR(250) NOT NULL,
+    release_date DATE NOT NULL,
+    models VARCHAR(250) NOT NULL,
+    platforms VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_games PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS films(
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(250) NOT NULL,
+    release_date DATE NOT NULL,
+    image VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_films PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS series(
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(250) NOT NULL,
+    release_date DATE NOT NULL,
+    image VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_series PRIMARY KEY(id)
+);
