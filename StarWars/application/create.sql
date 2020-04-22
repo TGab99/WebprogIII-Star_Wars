@@ -61,10 +61,11 @@ CREATE TABLE IF NOT EXISTS droid(
     model VARCHAR(250) NOT NULL,
     class VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
-    file VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_droid PRIMARY KEY(id)
 );
+
+INSERT INTO droid(name,homeworld,creator,model,class,image) VALUES('R2-D2','Naboo','Ismeretlen','R2 sorozatú astromech droid','Astromech droid','r2-d2.png');
 
 CREATE TABLE IF NOT EXISTS planets(
     id INT NOT NULL AUTO_INCREMENT,
@@ -73,10 +74,11 @@ CREATE TABLE IF NOT EXISTS planets(
     sector VARCHAR(250) NOT NULL,
     system VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
-    file VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_planets PRIMARY KEY(id)
 );
+
+INSERT INTO planets(name,regio,sector,system,image) VALUES('Coruscant','Core Worlds','Coruscant subsector, Corusca sector', 'Coruscant system','coruscant.png');
 
 CREATE TABLE IF NOT EXISTS weapons(
     id INT NOT NULL AUTO_INCREMENT,
