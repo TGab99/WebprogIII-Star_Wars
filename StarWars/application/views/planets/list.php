@@ -1,3 +1,4 @@
+<?php echo anchor(base_url('planets/insert'),'Új hozzáadása'); ?>
 <?php if($planets == NULL || empty($planets)): ?>
     <p>Nincs rögzítve egyetlen bolygó sem!</p>
 <?php else: ?>
@@ -20,6 +21,11 @@
                 <td><?=$p->regio?></td>
                 <td><?=$p->sector?></td>
                 <td><?=$p->system?></td>
+                <td>
+                    <?php echo anchor(base_url('planets/profile/'.$p->id),'Profil'); ?>
+                    <?php echo anchor(base_url('planets/edit/'.$p->id),'Módosítás'); ?>
+                    <?php echo anchor(base_url('planets/delete/'.$p->id),'Törlés'); ?>
+                </td>
             </tr>
             <?php endforeach; ?>
         </tbody>
