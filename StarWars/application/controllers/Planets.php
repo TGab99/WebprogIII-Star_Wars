@@ -29,4 +29,111 @@ class Planets extends CI_Controller{
         
         $this->load->view('planets/list',$view_params);
     }
+    
+    public function insert(){
+        if($this->input->post('submit')){
+            
+            $upload_config['allowed_types'] = 'jpg|jpeg|gif|png';
+            $upload_config['max_size'] = 2355;
+            $upload_config['min_width'] = 250;
+            $upload_config['max_width'] = 2000;
+            $upload_config['min_height'] = 250;
+            $upload_config['max_height'] = 1200;
+            
+            $upload_config['file_name'] = $_FILES['file']['name'];
+            $upload_config['upload_path'] = './uploads/image/planet/';
+            $upload_config['file_ext_tolower'] = TRUE;
+            $upload_config['overwrite'] = TRUE;
+            
+            $this->load->library('upload');
+            $this->upload->initialize($upload_config);
+            
+            $this->load->library('form_validation');
+            
+            $this->form_validation->set_rules('name','Név','required');
+            $this->form_validation->set_rules('regio','Régió','required');
+            $this->form_validation->set_rules('sector','Szektor','required');
+            $this->form_validation->set_rules('system','Rendszer','required');
+            
+            if($this->form_validation->run() && $this->upload->do_upload('file') == TRUE){
+                $this->planets_model->insert($this->input->post('name'), $this->input->post('regio'), $this->input->post('sector'), 
+                        $this->input->post('system'), $upload_config['file_name']);
+                
+                $this->load->helper('url');
+                redirect(base_url('planets'));
+            }
+        }
+        $this->load->helper('form');
+        $this->load->view('planets/insert');
+    }
+    
+    public function profile($id = NULL){
+        if($id == NULL){
+            show_error('Az adatlap megtekintéséhez hiányzik az id!');
+        }
+        
+        $record = $this->planets_model->select_by_id($id);
+        
+        if($record == NULL){
+            show_error('Nincs ilyen id-val ellátott mező!');
+        }
+        
+        $view_params = [
+            'planets' => $record
+        ];
+        
+        $this->load->helper('form');
+        $this->load->view('planets/profile',$view_params);
+    }
+    
+    public function edit($id = NULL){
+        if($id == NULL){
+            show_error('A szerkesztéshez hiányzik az id!');
+        }
+        
+        $record = $this->planets_model->select_by_id($id);
+        
+        if($record == NULL){
+            show_error('Nincs ilyen id-val ellátott mező!');
+        }
+        
+        $this->load->library('form_validation');
+            
+        $this->form_validation->set_rules('name','Név','required');
+        $this->form_validation->set_rules('regio','Régió','required');
+        $this->form_validation->set_rules('sector','Szektor','required');
+        $this->form_validation->set_rules('system','Rendszer','required');
+        
+        if($this->form_validation->run() == TRUE){
+            $this->planets_model->update($id,$this->input->post('name'), $this->input->post('regio'), $this->input->post('sector'), 
+                        $this->input->post('system'));
+            
+            $this->load->helper('url');
+            redirect(base_url('planets'));
+        }else{
+            $view_params = [
+                'planets' => $record
+            ];
+            
+            $this->load->helper('form');
+            $this->load->view('planets/edit',$view_params);
+        }
+    }
+    
+    public function delete($id = NULL){
+        if($id == NULL){
+            show_error('A törléshez hiányzik az id értéke!');
+        }
+        
+        $record = $this->planets_model->select_by_id($id);
+        
+        if($record == NULL){
+            show_error('Nincs ilyen id-vel ellátott mező!');
+        }
+        
+        $this->planets_model->delete($id);
+        
+        $this->load->helper('url');
+        redirect(base_url('planets'));
+    }
 }
