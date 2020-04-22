@@ -68,7 +68,7 @@ class Sith_model extends CI_Model{
     }
     
     public function delete($id){
-        $record = $this->db->where('id',$id);
+        $this->db->where('id',$id);
         
         return $this->db->delete('sith');
     }
