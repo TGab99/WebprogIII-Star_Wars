@@ -33,10 +33,11 @@ CREATE TABLE IF NOT EXISTS jedi(
     gender VARCHAR(250) NOT NULL,
     rank VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
-    file VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_jedi PRIMARY KEY(id)
 );
+
+INSERT INTO jedi(name,homeworld,species,gender,rank,image) VALUES('Yoda','Dagobah','Ismeretlen','Férfi','Jedi mester','yoda.png');
 
 CREATE TABLE IF NOT EXISTS sith(
     id INT NOT NULL AUTO_INCREMENT,
@@ -46,10 +47,11 @@ CREATE TABLE IF NOT EXISTS sith(
     gender VARCHAR(250) NOT NULL,
     rank VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
-    file VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_sith PRIMARY KEY(id)
 );
+
+INSERT INTO sith(name,homeworld,species,gender,rank,image) VALUES('Darth Vader','Tatooine','Gép/Ember','Férfi','Sötét Nagyúr','darth_vader.jpg');
 
 CREATE TABLE IF NOT EXISTS droid(
     id INT NOT NULL AUTO_INCREMENT,
@@ -147,4 +149,30 @@ CREATE TABLE IF NOT EXISTS series(
     image VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_series PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS clone(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    homeworld VARCHAR(250) NOT NULL,
+    species VARCHAR(250) NOT NULL,
+    gender VARCHAR(250) NOT NULL,
+    rank VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+    file VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_clone PRIMARY KEY(id)
+);
+
+CREATE TABLE IF NOT EXISTS mandalorians(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(250) NOT NULL,
+    homeworld VARCHAR(250) NOT NULL,
+    species VARCHAR(250) NOT NULL,
+    gender VARCHAR(250) NOT NULL,
+    rank VARCHAR(250) NOT NULL,
+    image VARCHAR(250) NOT NULL,
+    file VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_mandalorians PRIMARY KEY(id)
 );
