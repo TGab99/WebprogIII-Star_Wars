@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS weapons(
     CONSTRAINT PK_weapons PRIMARY KEY(id)
 );
 
-INSERT INTO weapons(name,type,image) VALUES('Lézerkard','Melee weapon','lightsaber.png');
+INSERT INTO weapons(name,type,image) VALUES('Lézerkard','Melee weapon','lightsaber.jpg');
 
 CREATE TABLE IF NOT EXISTS vehicles(
     id INT NOT NULL AUTO_INCREMENT,
@@ -97,7 +97,6 @@ CREATE TABLE IF NOT EXISTS vehicles(
     model VARCHAR(250) NOT NULL,
     class VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
-    file VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_vehicles PRIMARY KEY(id)
 );
@@ -105,11 +104,15 @@ CREATE TABLE IF NOT EXISTS vehicles(
 CREATE TABLE IF NOT EXISTS species(
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(250) NOT NULL,
+    homeworld VARCHAR(250) NOT NULL,
+    species VARCHAR(250) NOT NULL,
+    gender VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
-    file VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_species PRIMARY KEY(id)
 );
+
+INSERT INTO species(name,homeworld,species,gender,image) VALUES('Chewbacca','Kashyyyk','Wookiee','Hím','chewbacca.jpg');
 
 CREATE TABLE IF NOT EXISTS senators(
     id INT NOT NULL AUTO_INCREMENT,
