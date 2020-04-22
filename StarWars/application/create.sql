@@ -85,10 +85,11 @@ CREATE TABLE IF NOT EXISTS weapons(
     name VARCHAR(250) NOT NULL,
     type VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
-    file VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_weapons PRIMARY KEY(id)
 );
+
+INSERT INTO weapons(name,type,image) VALUES('Lézerkard','Melee weapon','lightsaber.png');
 
 CREATE TABLE IF NOT EXISTS vehicles(
     id INT NOT NULL AUTO_INCREMENT,
