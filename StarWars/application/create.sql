@@ -125,20 +125,22 @@ CREATE TABLE IF NOT EXISTS senators(
     CONSTRAINT PK_senators PRIMARY KEY(id)
 );
 
-INSERT INTO senators(name,homeworld,species,gender,image) VALUES('Padmé Amidala','Naboo','Human','Nő','padme_amidala.png');
+INSERT INTO senators(name,homeworld,species,gender,image) VALUES('Padmé Amidala','Naboo','Human','Female','padme_amidala.png');
 
 CREATE TABLE IF NOT EXISTS games(
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(250) NOT NULL,
-    developres VARCHAR(250) NOT NULL,
+    developers VARCHAR(250) NOT NULL,
     publishers VARCHAR(250) NOT NULL,
-    release_date DATE NOT NULL,
+    release_date VARCHAR(250) NOT NULL,
     models VARCHAR(250) NOT NULL,
     platforms VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_games PRIMARY KEY(id)
 );
+
+INSERT INTO games(name,developers,publishers,release_date,models,platforms,image) VALUES('Star Wars Arcade','Atari Inc.','Atari Inc., Parker Brothers, Domark, Broderbund','May 1983','Single-Player','Arcade','star_wars_arcade_game.png');
 
 CREATE TABLE IF NOT EXISTS films(
     id INT NOT NULL AUTO_INCREMENT,
