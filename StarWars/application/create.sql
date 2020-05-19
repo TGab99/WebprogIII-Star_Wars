@@ -186,7 +186,6 @@ CREATE TABLE IF NOT EXISTS mandalorians(
     gender VARCHAR(250) NOT NULL,
     rank VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
-    file VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_mandalorians PRIMARY KEY(id)
 );
