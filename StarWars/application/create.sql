@@ -154,11 +154,13 @@ CREATE TABLE IF NOT EXISTS films(
 CREATE TABLE IF NOT EXISTS series(
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(250) NOT NULL,
-    release_date DATE NOT NULL,
+    release_date VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_series PRIMARY KEY(id)
 );
+
+INSERT INTO series(title,release_date,image) VALUES('Star Wars: Droids','Sep 7,1985','star_wars_droids');
 
 CREATE TABLE IF NOT EXISTS clone(
     id INT NOT NULL AUTO_INCREMENT,
