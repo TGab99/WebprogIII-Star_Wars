@@ -184,8 +184,9 @@ CREATE TABLE IF NOT EXISTS mandalorians(
     homeworld VARCHAR(250) NOT NULL,
     species VARCHAR(250) NOT NULL,
     gender VARCHAR(250) NOT NULL,
-    rank VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_mandalorians PRIMARY KEY(id)
 );
+
+INSERT INTO mandalorians(name,homeworld,species,gender,image) VALUES('Ursa Wren','Krownest','Human','Female','ursa_wren.png');
