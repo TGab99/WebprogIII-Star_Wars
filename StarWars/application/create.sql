@@ -145,11 +145,13 @@ INSERT INTO games(name,developers,publishers,release_date,models,platforms,image
 CREATE TABLE IF NOT EXISTS films(
     id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(250) NOT NULL,
-    release_date DATE NOT NULL,
+    release_date VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_films PRIMARY KEY(id)
 );
+
+INSERT INTO films(title,release_date,image) VALUES('Star Wars: A New Hope','May 25, 1977','a_new_hope.jpg');
 
 CREATE TABLE IF NOT EXISTS series(
     id INT NOT NULL AUTO_INCREMENT,
