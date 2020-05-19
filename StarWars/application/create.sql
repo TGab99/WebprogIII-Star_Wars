@@ -121,10 +121,11 @@ CREATE TABLE IF NOT EXISTS senators(
     species VARCHAR(250) NOT NULL,
     gender VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
-    file VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_senators PRIMARY KEY(id)
 );
+
+INSERT INTO senators(name,homeworld,species,gender,image) VALUES('Padmé Amidala','Naboo','Human','Nő','padme_amidala.png');
 
 CREATE TABLE IF NOT EXISTS games(
     id INT NOT NULL AUTO_INCREMENT,
