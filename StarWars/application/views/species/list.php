@@ -1,3 +1,18 @@
+<style>
+    li{
+        display: inline;
+    }
+    ul{
+        background-color: #dddddd;
+    }
+</style>
+<ul>
+    <li>Home</li>
+    <li>Films</li>
+    <li>Series</li>
+    <li>Lists</li>
+</ul>
+<br>
 <?php echo anchor(base_url('species/insert'),'Új hozzáadása'); ?>
 <?php if($species == NULL || empty($species)): ?>
     <p>Nincs rögzítve egyetlen faj sem!</p>

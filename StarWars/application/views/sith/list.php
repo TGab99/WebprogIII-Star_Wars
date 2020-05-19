@@ -1,3 +1,18 @@
+<style>
+    li{
+        display: inline;
+    }
+    ul{
+        background-color: #dddddd;
+    }
+</style>
+<ul>
+    <li>Home</li>
+    <li>Films</li>
+    <li>Series</li>
+    <li>Lists</li>
+</ul>
+<br>
 <?php echo anchor(base_url('sith/insert'),'Új hozzáadása'); ?>
 <?php if($sith == NULL || empty($sith)): ?>
     <p>Nincs rögzítve egyetlen Sith sem!</p>

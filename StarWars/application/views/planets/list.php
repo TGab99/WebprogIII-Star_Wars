@@ -1,3 +1,18 @@
+<style>
+    li{
+        display: inline;
+    }
+    ul{
+        background-color: #dddddd;
+    }
+</style>
+<ul>
+    <li>Home</li>
+    <li>Films</li>
+    <li>Series</li>
+    <li>Lists</li>
+</ul>
+<br>
 <?php echo anchor(base_url('planets/insert'),'Új hozzáadása'); ?>
 <?php if($planets == NULL || empty($planets)): ?>
     <p>Nincs rögzítve egyetlen bolygó sem!</p>

@@ -1,3 +1,18 @@
+<style>
+    li{
+        display: inline;
+    }
+    ul{
+        background-color: #dddddd;
+    }
+</style>
+<ul>
+    <li>Home</li>
+    <li>Films</li>
+    <li>Series</li>
+    <li>Lists</li>
+</ul>
+<br>
 <?php echo anchor(base_url('jedi/insert'),'Új hozzáadása'); ?>
 <?php if($jedi == NULL || empty($jedi)) : ?>
     <p>Nincs rögzítve egyetlen jedi sem!</p>

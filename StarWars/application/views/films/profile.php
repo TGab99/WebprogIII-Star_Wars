@@ -1,3 +1,18 @@
+<style>
+    li{
+        display: inline;
+    }
+    ul{
+        background-color: #dddddd;
+    }
+</style>
+<ul>
+    <li>Home</li>
+    <li>Films</li>
+    <li>Series</li>
+    <li>Lists</li>
+</ul>
+<br>
 <h1><?=$film->title?> adatlapja</h1>
 <?php $this->load->helper('url');?>
 <img src="<?=base_url('uploads/image/films/'.$film->image)?>">

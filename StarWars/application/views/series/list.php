@@ -1,3 +1,18 @@
+<style>
+    li{
+        display: inline;
+    }
+    ul{
+        background-color: #dddddd;
+    }
+</style>
+<ul>
+    <li>Home</li>
+    <li>Films</li>
+    <li>Series</li>
+    <li>Lists</li>
+</ul>
+<br>
 <?php echo anchor(base_url('series/insert'),'Új hozzáadása'); ?>
 <?php if($series == NULL || empty($series)):?>
     <p>Nincs rögzítve egyetlen egy sorozat sem!</p>
