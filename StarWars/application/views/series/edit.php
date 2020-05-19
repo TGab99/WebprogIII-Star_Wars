@@ -7,7 +7,7 @@
 
 <?php echo form_input('title',$series->title,['placeholder' => 'Cím']); ?>
 
-<?php echo form_error('series'); ?>
+<?php echo form_error('title'); ?>
 <br/>
 
 <?php echo form_input('release_date',$series->release_date,['placeholder' => 'Megjelenési dátum']); ?>
