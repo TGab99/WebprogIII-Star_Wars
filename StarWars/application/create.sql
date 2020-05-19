@@ -172,10 +172,11 @@ CREATE TABLE IF NOT EXISTS clone(
     gender VARCHAR(250) NOT NULL,
     rank VARCHAR(250) NOT NULL,
     image VARCHAR(250) NOT NULL,
-    file VARCHAR(250) NOT NULL,
 
     CONSTRAINT PK_clone PRIMARY KEY(id)
 );
+
+INSERT INTO clone(name, homeworld,species,gender,rank,image) VALUES('Rex','Kamino','Human','Male','Captain Commander','rex.png');
 
 CREATE TABLE IF NOT EXISTS mandalorians(
     id INT NOT NULL AUTO_INCREMENT,
