@@ -1,31 +1,28 @@
-<style>
-    li{
-        display: inline;
-    }
-    ul{
-        background-color: #dddddd;
-    }
-</style>
-<ul>
-    <li>Home</li>
-    <li>Films</li>
-    <li>Series</li>
-    <li>Lists</li>
-</ul>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('style/list.css');?>">
+<h1 id="main">Star Wars</h1>
+<div class="nav">
+        <a href="<?=base_url('Main.html')?>">Home</a> |
+        <a href="<?=base_url('films') ?>">Films</a> |
+        <a href="<?=base_url('series') ?>">Series</a> |
+        <a href="<?=base_url('games')?>">Games</a> |
+        <a href="">Characters</a> |
+        <a href="<?=base_url('planets')?>">Planets</a> |
+        <a href="<?=base_url('weapons')?>">Weapons</a>
+</div>
 <br>
-<?php echo anchor(base_url('mandalorians/insert'),'Új hozzáadása'); ?>
+<p id="insert"><?php echo anchor(base_url('mandalorians/insert'),'Új hozzáadása'); ?></p>
 <?php if($mandalorian == NULL || empty($mandalorian)) : ?>
-    <p>Nincs rögzítve egyetlen mandalór sem!</p>
+    <p>No any records in the mandalorian's table!</p>
 <?php else: ?>
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Név</th>
-                <th>Anyabolygó</th>
-                <th>Faj</th>
-                <th>Nem</th>
-                <th>Műveletek</th>
+                <th>Name</th>
+                <th>Homeworld</th>
+                <th>Species</th>
+                <th>Gender</th>
+                <th>Options</th>
             </tr>
         </thead>
         <tbody>
@@ -38,8 +35,8 @@
                 <td><?=$m->gender?></td>
                 <td>
                     <?php echo anchor(base_url('mandalorians/profile/'.$m->id),'Profil'); ?>
-                    <?php echo anchor(base_url('mandalorians/edit/'.$m->id),'Módosít'); ?>
-                    <?php echo anchor(base_url('mandalorians/delete/'.$m->id),'Törlés'); ?>
+                    <?php echo anchor(base_url('mandalorians/edit/'.$m->id),'Edit'); ?>
+                    <?php echo anchor(base_url('mandalorians/delete/'.$m->id),'Delete'); ?>
                 </td>
             </tr>
             <?php endforeach;?>

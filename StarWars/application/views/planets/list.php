@@ -1,31 +1,28 @@
-<style>
-    li{
-        display: inline;
-    }
-    ul{
-        background-color: #dddddd;
-    }
-</style>
-<ul>
-    <li>Home</li>
-    <li>Films</li>
-    <li>Series</li>
-    <li>Lists</li>
-</ul>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('style/list.css');?>">
+<h1 id="main">Star Wars</h1>
+<div class="nav">
+        <a href="<?=base_url('Main.html')?>">Home</a> |
+        <a href="<?=base_url('films') ?>">Films</a> |
+        <a href="<?=base_url('series') ?>">Series</a> |
+        <a href="<?=base_url('games')?>">Games</a> |
+        <a href="">Characters</a> |
+        <a href="<?=base_url('planets')?>">Planets</a> |
+        <a href="<?=base_url('weapons')?>">Weapons</a>
+</div>
 <br>
-<?php echo anchor(base_url('planets/insert'),'Új hozzáadása'); ?>
+<p id="insert"><?php echo anchor(base_url('planets/insert'),'Új hozzáadása'); ?></p>
 <?php if($planets == NULL || empty($planets)): ?>
-    <p>Nincs rögzítve egyetlen bolygó sem!</p>
+    <p>No any records in the planet's table!</p>
 <?php else: ?>
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Név</th>
-                <th>Régió</th>
-                <th>Szektor</th>
-                <th>Rendszer</th>
-                <th>Műveletek</th>
+                <th>Name</th>
+                <th>Regio</th>
+                <th>Sector</th>
+                <th>System</th>
+                <th>Options</th>
             </tr>
         </thead>
         <tbody>
@@ -38,8 +35,8 @@
                 <td><?=$p->system?></td>
                 <td>
                     <?php echo anchor(base_url('planets/profile/'.$p->id),'Profil'); ?>
-                    <?php echo anchor(base_url('planets/edit/'.$p->id),'Módosítás'); ?>
-                    <?php echo anchor(base_url('planets/delete/'.$p->id),'Törlés'); ?>
+                    <?php echo anchor(base_url('planets/edit/'.$p->id),'Edit'); ?>
+                    <?php echo anchor(base_url('planets/delete/'.$p->id),'Delete'); ?>
                 </td>
             </tr>
             <?php endforeach; ?>

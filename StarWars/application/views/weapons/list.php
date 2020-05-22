@@ -1,29 +1,26 @@
-<style>
-    li{
-        display: inline;
-    }
-    ul{
-        background-color: #dddddd;
-    }
-</style>
-<ul>
-    <li>Home</li>
-    <li>Films</li>
-    <li>Series</li>
-    <li>Lists</li>
-</ul>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('style/list.css');?>">
+<h1 id="main">Star Wars</h1>
+<div class="nav">
+        <a href="<?=base_url('Main.html')?>">Home</a> |
+        <a href="<?=base_url('films') ?>">Films</a> |
+        <a href="<?=base_url('series') ?>">Series</a> |
+        <a href="<?=base_url('games')?>">Games</a> |
+        <a href="">Characters</a> |
+        <a href="<?=base_url('planets')?>">Planets</a> |
+        <a href="<?=base_url('weapons')?>">Weapons</a>
+</div>
 <br>
-<?php echo anchor(base_url('weapons/insert'),'Új hozzáadása'); ?>
+<p id='insert'><?php echo anchor(base_url('weapons/insert'),'Új hozzáadása'); ?></p>
 <?php if($weapons == NULL || empty($weapons)): ?>
-    <p>Nincs rögzítve egyetlen fegyver sem!</p>
+    <p>No any records in the weapon's table!</p>
 <?php else: ?>
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Név</th>
-                <th>Típus</th>
-                <th>Műveletek</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Options</th>
             </tr>
         </thead>
         <tbody>
@@ -34,8 +31,8 @@
                 <td><?=$w->type?></td>
                 <td>
                     <?php echo anchor(base_url('weapons/profile/'.$w->id),'Profil'); ?>
-                    <?php echo anchor(base_url('weapons/edit/'.$w->id),'Módosítás'); ?>
-                    <?php echo anchor(base_url('weapons/delete/'.$w->id),'Törlés'); ?>
+                    <?php echo anchor(base_url('weapons/edit/'.$w->id),'Edit'); ?>
+                    <?php echo anchor(base_url('weapons/delete/'.$w->id),'Delete'); ?>
                 </td>
             </tr>
             <?php endforeach; ?>

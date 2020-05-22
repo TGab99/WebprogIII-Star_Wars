@@ -1,32 +1,29 @@
-<style>
-    li{
-        display: inline;
-    }
-    ul{
-        background-color: #dddddd;
-    }
-</style>
-<ul>
-    <li>Home</li>
-    <li>Films</li>
-    <li>Series</li>
-    <li>Lists</li>
-</ul>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('style/list.css');?>">
+<h1 id="main">Star Wars</h1>
+<div class="nav">
+        <a href="<?=base_url('Main.html')?>">Home</a> |
+        <a href="<?=base_url('films') ?>">Films</a> |
+        <a href="<?=base_url('series') ?>">Series</a> |
+        <a href="<?=base_url('games')?>">Games</a> |
+        <a href="">Characters</a> |
+        <a href="<?=base_url('planets')?>">Planets</a> |
+        <a href="<?=base_url('weapons')?>">Weapons</a>
+</div>
 <br>
-<?php echo anchor(base_url('clones/insert'),'Új hozzáadása'); ?>
+<p id="insert"><?php echo anchor(base_url('clones/insert'),'Új hozzáadása'); ?></p>
 <?php if($clone == NULL || empty($clone)) : ?>
-    <p>Nincs rögzítve egyetlen klón sem!</p>
+    <p>No any records in the clone's table!</p>
 <?php else: ?>
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Név</th>
-                <th>Anyabolygó</th>
-                <th>Faj</th>
-                <th>Nem</th>
-                <th>Rang</th>
-                <th>Műveletek</th>
+                <th>Name</th>
+                <th>Homeworld</th>
+                <th>Species</th>
+                <th>Gender</th>
+                <th>Rank</th>
+                <th>Options</th>
             </tr>
         </thead>
         <tbody>
@@ -40,8 +37,8 @@
                 <td><?=$c->rank?></td>
                 <td>
                     <?php echo anchor(base_url('clones/profile/'.$c->id),'Profil'); ?>
-                    <?php echo anchor(base_url('clones/edit/'.$c->id),'Módosít'); ?>
-                    <?php echo anchor(base_url('clones/delete/'.$c->id),'Törlés'); ?>
+                    <?php echo anchor(base_url('clones/edit/'.$c->id),'Edit'); ?>
+                    <?php echo anchor(base_url('clones/delete/'.$c->id),'Delete'); ?>
                 </td>
             </tr>
             <?php endforeach;?>
