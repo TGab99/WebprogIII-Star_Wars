@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id='insert'><?php echo anchor(base_url('sith/insert'),'Új hozzáadása'); ?></p>
+<p id='insert'><?php echo anchor(base_url('sith/insert'),'Insert new record'); ?></p>
 <?php if($sith == NULL || empty($sith)): ?>
     <p>No any records in the sith's table!</p>
 <?php else: ?>
@@ -36,7 +36,7 @@
                 <td><?=$s->gender?></td>
                 <td><?=$s->rank?></td>
                 <td>
-                    <?php echo anchor(base_url('sith/profile/'.$s->id),'Profil'); ?>
+                    <?php echo anchor(base_url('sith/profile/'.$s->id),'Profile'); ?>
                     <?php echo anchor(base_url('sith/edit/'.$s->id),'Edit'); ?>
                     <?php echo anchor(base_url('sith/delete/'.$s->id),'Delete'); ?>
                 </td>

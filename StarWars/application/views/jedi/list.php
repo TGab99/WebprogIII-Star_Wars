@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id="insert"><?php echo anchor(base_url('jedi/insert'),'Új hozzáadása'); ?><p>
+<p id="insert"><?php echo anchor(base_url('jedi/insert'),'Insert new record'); ?><p>
 <?php if($jedi == NULL || empty($jedi)) : ?>
     <p>No any records in the jedi's table!</p>
 <?php else: ?>
@@ -36,7 +36,7 @@
                 <td><?=$j->gender?></td>
                 <td><?=$j->rank?></td>
                 <td>
-                    <?php echo anchor(base_url('jedi/profile/'.$j->id),'Profil'); ?>
+                    <?php echo anchor(base_url('jedi/profile/'.$j->id),'Profile'); ?>
                     <?php echo anchor(base_url('jedi/edit/'.$j->id),'Edit'); ?>
                     <?php echo anchor(base_url('jedi/delete/'.$j->id),'Delete'); ?>
                 </td>

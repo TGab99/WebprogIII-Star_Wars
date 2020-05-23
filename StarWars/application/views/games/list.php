@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id="insert"><?php echo anchor(base_url('games/insert'),'Új hozzáadása'); ?></p>
+<p id="insert"><?php echo anchor(base_url('games/insert'),'Insert new record'); ?></p>
 <?php if($game == NULL || empty($game)):?>
     <p>No any records in the game's table!</p>
 <?php else:?>
@@ -38,7 +38,7 @@
                 <td><?=$g->models?></td>
                 <td><?=$g->platforms?></td>
                 <td>
-                    <?php echo anchor(base_url('games/profile/'.$g->id),'Profil'); ?>
+                    <?php echo anchor(base_url('games/profile/'.$g->id),'Profile'); ?>
                     <?php echo anchor(base_url('games/edit/'.$g->id),'Edit');?>
                     <?php echo anchor(base_url('games/delete/'.$g->id),'Delete'); ?>
                 </td>

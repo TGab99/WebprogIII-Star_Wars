@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id='insert'><?php echo anchor(base_url('weapons/insert'),'Új hozzáadása'); ?></p>
+<p id='insert'><?php echo anchor(base_url('weapons/insert'),'Insert new record'); ?></p>
 <?php if($weapons == NULL || empty($weapons)): ?>
     <p>No any records in the weapon's table!</p>
 <?php else: ?>
@@ -30,7 +30,7 @@
                 <td><a href="<?=base_url('uploads/image/weapon/'.$w->image)?>" target="_blank"><?=$w->name?></a></td>
                 <td><?=$w->type?></td>
                 <td>
-                    <?php echo anchor(base_url('weapons/profile/'.$w->id),'Profil'); ?>
+                    <?php echo anchor(base_url('weapons/profile/'.$w->id),'Profile'); ?>
                     <?php echo anchor(base_url('weapons/edit/'.$w->id),'Edit'); ?>
                     <?php echo anchor(base_url('weapons/delete/'.$w->id),'Delete'); ?>
                 </td>

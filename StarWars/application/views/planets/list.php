@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id="insert"><?php echo anchor(base_url('planets/insert'),'Új hozzáadása'); ?></p>
+<p id="insert"><?php echo anchor(base_url('planets/insert'),'Insert new record'); ?></p>
 <?php if($planets == NULL || empty($planets)): ?>
     <p>No any records in the planet's table!</p>
 <?php else: ?>
@@ -34,7 +34,7 @@
                 <td><?=$p->sector?></td>
                 <td><?=$p->system?></td>
                 <td>
-                    <?php echo anchor(base_url('planets/profile/'.$p->id),'Profil'); ?>
+                    <?php echo anchor(base_url('planets/profile/'.$p->id),'Profile'); ?>
                     <?php echo anchor(base_url('planets/edit/'.$p->id),'Edit'); ?>
                     <?php echo anchor(base_url('planets/delete/'.$p->id),'Delete'); ?>
                 </td>

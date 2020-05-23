@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('style/list.css');?>">
 <h1 id="main">Star Wars</h1>
 <div class="nav">
-        <a href="<?=base_url('Main.html')?>">Home</a> |
+        <a href="<?=base_url('index.php')?>">Home</a> |
         <a href="<?=base_url('films') ?>">Films</a> |
         <a href="<?=base_url('series') ?>">Series</a> |
         <a href="<?=base_url('games')?>">Games</a> |
@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id="insert"><?php echo anchor(base_url('clones/insert'),'Új hozzáadása'); ?></p>
+<p id="insert"><?php echo anchor(base_url('clones/insert'),'Insert new record'); ?></p>
 <?php if($clone == NULL || empty($clone)) : ?>
     <p>No any records in the clone's table!</p>
 <?php else: ?>
@@ -36,7 +36,7 @@
                 <td><?=$c->gender?></td>
                 <td><?=$c->rank?></td>
                 <td>
-                    <?php echo anchor(base_url('clones/profile/'.$c->id),'Profil'); ?>
+                    <?php echo anchor(base_url('clones/profile/'.$c->id),'Profile'); ?>
                     <?php echo anchor(base_url('clones/edit/'.$c->id),'Edit'); ?>
                     <?php echo anchor(base_url('clones/delete/'.$c->id),'Delete'); ?>
                 </td>

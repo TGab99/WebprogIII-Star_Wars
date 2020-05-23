@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id="insert"><?php echo anchor(base_url('senators/insert'),'Új hozzáadása'); ?></p>
+<p id="insert"><?php echo anchor(base_url('senators/insert'),'Insert new record'); ?></p>
 <?php if($senator == NULL || empty($senator)):?>
     <p>No any records in the senator's table!</p>
 <?php else:?>
@@ -34,7 +34,7 @@
                 <td><?=$s->species?></td>
                 <td><?=$s->gender?></td>
                 <td>
-                    <?php echo anchor(base_url('senators/profile/'.$s->id),'Profil'); ?>
+                    <?php echo anchor(base_url('senators/profile/'.$s->id),'Profile'); ?>
                     <?php echo anchor(base_url('senators/edit/'.$s->id),'Edit');?>
                     <?php echo anchor(base_url('senators/delete/'.$s->id),'Delete'); ?>
                 </td>

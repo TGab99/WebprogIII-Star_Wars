@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id="insert"><?php echo anchor(base_url('films/insert'),'Új hozzáadása'); ?></p>
+<p id="insert"><?php echo anchor(base_url('films/insert'),'Insert new record'); ?></p>
 <?php if($film == NULL || empty($film)):?>
     <p>No any records in the film's table!</p>
 <?php else:?>
@@ -30,7 +30,7 @@
                 <td><a href="<?=base_url('uploads/image/films/'.$f->image)?>" target="_blank"><?=$f->title?></a></td>
                 <td><?=$f->release_date?></td>
                 <td>
-                    <?php echo anchor(base_url('films/profile/'.$f->id),'Profil'); ?>
+                    <?php echo anchor(base_url('films/profile/'.$f->id),'Profile'); ?>
                     <?php echo anchor(base_url('films/edit/'.$f->id),'Edit');?>
                     <?php echo anchor(base_url('films/delete/'.$f->id),'Delete'); ?>
                 </td>

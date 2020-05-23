@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id="insert"><?php echo anchor(base_url('species/insert'),'Új hozzáadása'); ?></p>
+<p id="insert"><?php echo anchor(base_url('species/insert'),'Insert new record'); ?></p>
 <?php if($species == NULL || empty($species)): ?>
     <p>No any records in the species's table!</p>
 <?php else: ?>
@@ -34,7 +34,7 @@
                 <td><?=$s->species?></td>
                 <td><?=$s->gender?></td>
                 <td>
-                    <?php echo anchor(base_url('species/profile/'.$s->id),'Profil'); ?>
+                    <?php echo anchor(base_url('species/profile/'.$s->id),'Profile'); ?>
                     <?php echo anchor(base_url('species/edit/'.$s->id),'Edit'); ?>
                     <?php echo anchor(base_url('species/delete/'.$s->id),'Delete'); ?>
                 </td>

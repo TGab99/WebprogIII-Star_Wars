@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id="insert"><?php echo anchor(base_url('droid/insert'),'Új hozzáadása'); ?></p>
+<p id="insert"><?php echo anchor(base_url('droid/insert'),'Insert new record'); ?></p>
 <?php if($droid == NULL || empty($droid)): ?>
     <p>No any records in the droid's table!</p>
 <?php else: ?>
@@ -36,7 +36,7 @@
                 <td><?=$s->model?></td>
                 <td><?=$s->class?></td>
                 <td>
-                    <?php echo anchor(base_url('droid/profile/'.$s->id),'Profil'); ?>
+                    <?php echo anchor(base_url('droid/profile/'.$s->id),'Profile'); ?>
                     <?php echo anchor(base_url('droid/edit/'.$s->id),'Edit'); ?>
                     <?php echo anchor(base_url('droid/delete/'.$s->id),'Delete'); ?>
                 </td>

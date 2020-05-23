@@ -10,7 +10,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<p id="insert"><?php echo anchor(base_url('mandalorians/insert'),'Új hozzáadása'); ?></p>
+<p id="insert"><?php echo anchor(base_url('mandalorians/insert'),'Insert new record'); ?></p>
 <?php if($mandalorian == NULL || empty($mandalorian)) : ?>
     <p>No any records in the mandalorian's table!</p>
 <?php else: ?>
@@ -34,7 +34,7 @@
                 <td><?=$m->species?></td>
                 <td><?=$m->gender?></td>
                 <td>
-                    <?php echo anchor(base_url('mandalorians/profile/'.$m->id),'Profil'); ?>
+                    <?php echo anchor(base_url('mandalorians/profile/'.$m->id),'Profile'); ?>
                     <?php echo anchor(base_url('mandalorians/edit/'.$m->id),'Edit'); ?>
                     <?php echo anchor(base_url('mandalorians/delete/'.$m->id),'Delete'); ?>
                 </td>
