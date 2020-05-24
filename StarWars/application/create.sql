@@ -25,6 +25,19 @@ CREATE TABLE IF NOT EXISTS ci_sessions(
      KEY `ci_sessions_timestamp` (`timestamp`)
 );
 
+CREATE TABLE IF NOT EXISTS users(
+    id INT NOT NULL AUTO_INCREMENT,
+    first_name VARCHAR(250) NOT NULL,
+    last_name VARCHAR(250) NOT NULL,
+    username VARCHAR(250) NOT NULL,
+    email VARCHAR(250) NOT NULL,
+    password VARCHAR(250) NOT NULL,
+
+    CONSTRAINT PK_users PRIMARY KEY(id)
+);
+
+INSERT INTO users(first_name,last_name,username,email,password) VALUES('Elek','Test','test','test@test.hu',sha1('test'));
+
 CREATE TABLE IF NOT EXISTS jedi(
     id INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(250) NOT NULL,
