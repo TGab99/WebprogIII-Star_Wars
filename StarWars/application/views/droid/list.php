@@ -3,11 +3,17 @@
 <?php $this->load->view('header'); ?>
 
 <div class="nav">
-        <a href="<?=base_url('index')?>">Home</a> |
+        <a href="<?=base_url('home')?>">Home</a> |
         <a href="<?=base_url('films') ?>">Films</a> |
         <a href="<?=base_url('series') ?>">Series</a> |
         <a href="<?=base_url('games')?>">Games</a> |
-        <a href="">Characters</a> |
+        <a href="<?=base_url('jedi')?>">Jedi</a> |
+        <a href="<?=base_url('sith')?>">Sith</a> |
+        <a href="<?=base_url('clones')?>">Clones</a> |
+        <a href="">Droid</a> |
+        <a href="<?=base_url('mandalorians')?>">Mandalorians</a> |
+        <a href="<?=base_url('senators')?>">Senators</a> |
+        <a href="<?=base_url('species')?>">Species</a> |
         <a href="<?=base_url('planets')?>">Planets</a> |
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
