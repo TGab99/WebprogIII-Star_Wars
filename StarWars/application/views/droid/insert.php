@@ -44,3 +44,4 @@
 <?php echo form_submit('submit','Save'); ?>
 <?php echo form_close(); ?>
 <p class='back'><a href="<?=base_url('droid')?>">Back</a></p>
+<?php $this->load->view('footer'); ?>

@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('style/list.css');?>">
-<h1 id="main">Star Wars</h1>
+<?php $this->load->view('header'); ?>
 <div class="nav">
         <a href="<?=base_url('index')?>">Home</a> |
         <a href="<?=base_url('films') ?>">Films</a> |
@@ -47,3 +47,4 @@
         </tbody>
     </table>
 <?php endif; ?>
+<?php $this->load->view('footer'); ?>

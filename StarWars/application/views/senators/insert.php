@@ -1,6 +1,6 @@
 <?php $this->load->helper('url');?>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('style/insert.css');?>">
-<h1 id="main">Star Wars</h1>
+<?php $this->load->view('header'); ?>
 <div class="nav">
         <a href="<?=base_url('index')?>">Home</a> |
         <a href="<?=base_url('films') ?>">Films</a> |
@@ -40,3 +40,4 @@
 <?php echo form_submit('submit','Save'); ?>
 <?php echo form_close(); ?>
 <p class='back'><a href="<?=base_url('senators')?>">Back</a></p>
+<?php $this->load->view('footer'); ?>

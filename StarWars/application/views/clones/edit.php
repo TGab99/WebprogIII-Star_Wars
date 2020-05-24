@@ -1,6 +1,8 @@
 <?php $this->load->helper('url');?>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('style/edit.css');?>">
-<h1 id="main">Star Wars</h1>
+
+<?php $this->load->view('header'); ?>
+
 <div class="nav">
         <a href="<?=base_url('index')?>">Home</a> |
         <a href="<?=base_url('films') ?>">Films</a> |
@@ -17,7 +19,6 @@
 <?php $this->load->helper('url');?>
 <img src="<?=base_url('uploads/image/clones/'.$clone->image)?>" width=auto height='300'>
 <br/>
-
 <?php echo form_input('name',$clone->name,['placeholder' => 'Name']); ?>
 
 <?php echo form_error('name'); ?>
@@ -45,3 +46,4 @@
 <?php echo form_submit('submit','Edit'); ?>
 <?php echo form_close(); ?>
 <p class='back'><a href="<?=base_url('clones')?>">Back</a></p>
+<?php $this->load->view('footer'); ?>

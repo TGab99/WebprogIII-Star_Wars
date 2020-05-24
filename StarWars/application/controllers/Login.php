@@ -36,13 +36,13 @@ class Login extends CI_Controller{
 			else 
 			  { 
 				$msg = "The email or password you entered is incorrect.";
-				redirect(base_url('index'));
+				$this->load->view('login_form',$msg);
 			  } 
 		}
 	} 
 		
-	public function dashboard()
-	  {
-	    $this->load->view('dashboard');	
-	  }
+    public function dashboard()
+    {
+        $this->load->view('dashboard');
+    }
 }

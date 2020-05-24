@@ -1,6 +1,8 @@
 <?php $this->load->helper('url');?>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('style/profile.css');?>">
-<h1 id="main">Star Wars</h1>
+
+<?php $this->load->view('header'); ?>
+
 <div class="nav">
         <a href="<?=base_url('index')?>">Home</a> |
         <a href="<?=base_url('films') ?>">Films</a> |
@@ -11,7 +13,7 @@
         <a href="<?=base_url('weapons')?>">Weapons</a>
 </div>
 <br>
-<h1><?=$droid->name?> adatlapja</h1>
+<h1><?=$droid->name?>'s profile</h1>
 <table class="table">
     <thead>
         <tr>
@@ -47,3 +49,4 @@
     <img src="<?=base_url('uploads/image/droid/'.$droid->image)?>" width=auto height="300">
 </div>
 <p class='back'><a href="<?=base_url('droid')?>">Back</a></p>
+<?php $this->load->view('footer'); ?>
