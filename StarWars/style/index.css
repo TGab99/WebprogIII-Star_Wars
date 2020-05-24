@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2020.05.24., 13:56:48
+    Author     : Acer
+*/
+*{
+    text-decoration: none;
+    color: yellow;
+}
+body{
+    background-image: url('../image/main.jpg');
+    background-size: cover;
+}
+p{
+    overflow: hidden;
+    word-spacing: 900px;
+    text-align: center;
+    font-size: 40px;
+    margin: 500px auto;
+}
+a:hover{
+    color: blue;
+}

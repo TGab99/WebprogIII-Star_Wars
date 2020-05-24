@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2020.05.24., 14:27:31
+    Author     : Acer
+*/
+body{
+    background-image: url('../image/register_login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 25px;
+}
+div{
+    flow:left;
+    height: 290px;
+    width: 300px;
+    margin: 200px auto;
+    border-radius: 8px;
+    background: linear-gradient;
+    display:table;
+}
+h3{
+    text-align: justify;
+}
