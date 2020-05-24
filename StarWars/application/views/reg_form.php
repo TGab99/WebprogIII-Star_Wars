@@ -28,10 +28,8 @@
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" />
     
-        <button type="submit" class="btn btn-success">Register</button>
+        <button type="submit">Register</button>
     </div>
-    <?php 
-    echo form_close(); 
-    ?>
+    <?php echo form_close(); ?>
 </body>
 </html>

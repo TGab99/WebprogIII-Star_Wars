@@ -19,11 +19,8 @@
         <label for="password">Password:</label>
 	<input type="password" id="password" name="password" />
         
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit">Login</button>
     </div>
-    
-    <?php
-    echo form_close(); 
-    ?>
+    <?php echo form_close();?>
 </body>
 </html>

@@ -32,7 +32,7 @@ class Login extends CI_Controller{
          else { 
 			$result = $this->login_model->login();
 			if ($result > 0)
-			redirect('dashboard');
+			redirect('home');
 			else 
 			  { 
 				$msg = "The email or password you entered is incorrect.";
@@ -41,8 +41,8 @@ class Login extends CI_Controller{
 		}
 	} 
 		
-    public function dashboard()
+    public function home()
     {
-        $this->load->view('dashboard');
+        $this->load->view('home');
     }
 }
