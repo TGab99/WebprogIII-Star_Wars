@@ -50,10 +50,10 @@ class Planets extends CI_Controller{
             
             $this->load->library('form_validation');
             
-            $this->form_validation->set_rules('name','Név','required');
-            $this->form_validation->set_rules('regio','Régió','required');
-            $this->form_validation->set_rules('sector','Szektor','required');
-            $this->form_validation->set_rules('system','Rendszer','required');
+            $this->form_validation->set_rules('name','Name','required');
+            $this->form_validation->set_rules('regio','Regio','required');
+            $this->form_validation->set_rules('sector','Sector','required');
+            $this->form_validation->set_rules('system','System','required');
             
             if($this->form_validation->run() && $this->upload->do_upload('file') == TRUE){
                 $this->planets_model->insert($this->input->post('name'), $this->input->post('regio'), $this->input->post('sector'), 
@@ -69,13 +69,13 @@ class Planets extends CI_Controller{
     
     public function profile($id = NULL){
         if($id == NULL){
-            show_error('Az adatlap megtekintéséhez hiányzik az id!');
+            show_error('You should give the id!');
         }
         
         $record = $this->planets_model->select_by_id($id);
         
         if($record == NULL){
-            show_error('Nincs ilyen id-val ellátott mező!');
+            show_error('No such record in the table!');
         }
         
         $view_params = [
@@ -88,21 +88,21 @@ class Planets extends CI_Controller{
     
     public function edit($id = NULL){
         if($id == NULL){
-            show_error('A szerkesztéshez hiányzik az id!');
+            show_error('You should give the id!');
         }
         
         $record = $this->planets_model->select_by_id($id);
         
         if($record == NULL){
-            show_error('Nincs ilyen id-val ellátott mező!');
+            show_error('No such record in the table!');
         }
         
         $this->load->library('form_validation');
             
-        $this->form_validation->set_rules('name','Név','required');
-        $this->form_validation->set_rules('regio','Régió','required');
-        $this->form_validation->set_rules('sector','Szektor','required');
-        $this->form_validation->set_rules('system','Rendszer','required');
+        $this->form_validation->set_rules('name','Name','required');
+        $this->form_validation->set_rules('regio','Regio','required');
+        $this->form_validation->set_rules('sector','Sector','required');
+        $this->form_validation->set_rules('system','System','required');
         
         if($this->form_validation->run() == TRUE){
             $this->planets_model->update($id,$this->input->post('name'), $this->input->post('regio'), $this->input->post('sector'), 
@@ -122,13 +122,13 @@ class Planets extends CI_Controller{
     
     public function delete($id = NULL){
         if($id == NULL){
-            show_error('A törléshez hiányzik az id értéke!');
+            show_error('You should give the id!');
         }
         
         $record = $this->planets_model->select_by_id($id);
         
         if($record == NULL){
-            show_error('Nincs ilyen id-vel ellátott mező!');
+            show_error('No such record in the table!');
         }
         
         $this->planets_model->delete($id);

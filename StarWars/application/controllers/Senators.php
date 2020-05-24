@@ -50,10 +50,10 @@ class Senators extends CI_Controller{
             
             $this->load->library('form_validation');
             
-            $this->form_validation->set_rules('name','Név','required');
-            $this->form_validation->set_rules('homeworld','Anyabolygó','required');
-            $this->form_validation->set_rules('species','Faj','required');
-            $this->form_validation->set_rules('gender','nem','required');
+            $this->form_validation->set_rules('name','Name','required');
+            $this->form_validation->set_rules('homeworld','Homeworld','required');
+            $this->form_validation->set_rules('species','Species','required');
+            $this->form_validation->set_rules('gender','Gender','required');
             
             if($this->form_validation->run() && $this->upload->do_upload('file') == TRUE){
                 $this->senators_model->insert($this->input->post('name'), $this->input->post('homeworld'), $this->input->post('species'), 
@@ -69,13 +69,13 @@ class Senators extends CI_Controller{
     
     public function profile($id = NULL){
         if($id == NULL){
-            show_error('Az adatlap megtekintéséhez hiányzik az id!');
+            show_error('You should give the id!');
         }
         
         $record = $this->senators_model->select_by_id($id);
         
         if($record == NULL){
-            show_error('Nincs ilyen id-val ellátott mező!');
+            show_error('No such record in the table!');
         }
         
         $view_params = [
@@ -88,21 +88,21 @@ class Senators extends CI_Controller{
     
     public function edit($id = NULL){
         if($id == NULL){
-            show_error('A szerkesztéshez hiányzik az id!');
+            show_error('You should give the id!');
         }
         
         $record = $this->senators_model->select_by_id($id);
         
         if($record == NULL){
-            show_error('Nincs ilyen id-val ellátott mező!');
+            show_error('No such record in the table!');
         }
         
         $this->load->library('form_validation');
             
-        $this->form_validation->set_rules('name','Név','required');
-        $this->form_validation->set_rules('homeworld','Anyabolygó','required');
-        $this->form_validation->set_rules('species','Faj','required');
-        $this->form_validation->set_rules('gender','Nem','required');
+        $this->form_validation->set_rules('name','Name','required');
+        $this->form_validation->set_rules('homeworld','Homeworld','required');
+        $this->form_validation->set_rules('species','Species','required');
+        $this->form_validation->set_rules('gender','Gender','required');
         
         if($this->form_validation->run() == TRUE){
             $this->senators_model->update($id,$this->input->post('name'), $this->input->post('homeworld'), $this->input->post('species'), 
@@ -122,13 +122,13 @@ class Senators extends CI_Controller{
     
     public function delete($id = NULL){
         if($id == NULL){
-            show_error('A törléshez hiányzik az id értéke!');
+            show_error('You should give the id!');
         }
         
         $record = $this->senators_model->select_by_id($id);
         
         if($record == NULL){
-            show_error('Nincs ilyen id-vel ellátott mező!');
+            show_error('No such record in the table!');
         }
         
         $this->senators_model->delete($id);
