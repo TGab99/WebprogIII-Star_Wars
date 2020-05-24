@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('style/list.css');?>">
 <h1 id="main">Star Wars</h1>
 <div class="nav">
-        <a href="<?=base_url('Main.html')?>">Home</a> |
+        <a href="<?=base_url('index')?>">Home</a> |
         <a href="<?=base_url('films') ?>">Films</a> |
         <a href="<?=base_url('series') ?>">Series</a> |
         <a href="<?=base_url('games')?>">Games</a> |

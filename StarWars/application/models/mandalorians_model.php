@@ -48,7 +48,7 @@ class mandalorians_model extends CI_Model{
             'image' => $image
         ];
         
-        $this->db->insert('mandalorians', $records);
+        $this->db->insert('mandalorians',$records);
         
         return $this->db->insert_id();
     }
