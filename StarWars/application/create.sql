@@ -50,7 +50,11 @@ CREATE TABLE IF NOT EXISTS jedi(
     CONSTRAINT PK_jedi PRIMARY KEY(id)
 );
 
-INSERT INTO jedi(name,homeworld,species,gender,rank,image) VALUES('Yoda','Dagobah','Ismeretlen','Férfi','Jedi mester','yoda.png');
+INSERT INTO jedi(name,homeworld,species,gender,rank,image) VALUES('Yoda','Dagobah','Unknown','Male','Jedi Mester','yoda.png');
+INSERT INTO jedi(name,homeworld,species,gender,rank,image) VALUES('Anakin Skywalker','Tatooine','Human','Male','Jedi Knight','anakin_skywalker.jpg');
+INSERT INTO jedi(name,homeworld,species,gender,rank,image) VALUES('Ashoka Tano','Shili','Togruta','Female','Jedi Padawan','ahsoka_tano.png');
+INSERT INTO jedi(name,homeworld,species,gender,rank,image) VALUES('Obi-Wan Kenobi','Stewjon','Human','Male','Jedi Mester','obi_wan_kenobi.jpg');
+INSERT INTO jedi(name,homeworld,species,gender,rank,image) VALUES('Mace Windu','Haruun Kal','Human','Male','Jedi Mester','mace_windu.jpg');
 
 CREATE TABLE IF NOT EXISTS sith(
     id INT NOT NULL AUTO_INCREMENT,
@@ -64,7 +68,9 @@ CREATE TABLE IF NOT EXISTS sith(
     CONSTRAINT PK_sith PRIMARY KEY(id)
 );
 
-INSERT INTO sith(name,homeworld,species,gender,rank,image) VALUES('Darth Vader','Tatooine','Gép/Ember','Férfi','Sötét Nagyúr','darth_vader.jpg');
+INSERT INTO sith(name,homeworld,species,gender,rank,image) VALUES('Darth Vader','Tatooine','Mechanic/Human','Male','Sith Lord','darth_vader.jpg');
+INSERT INTO sith(name,homeworld,species,gender,rank,image) VALUES('Darth Sidious','Naboo','Human','Male','Sith Lord','darth_sidious.png');
+INSERT INTO sith(name,homeworld,species,gender,rank,image) VALUES('Darth Maul','Dathomir','Zabrak','Male','Sith Appretince','darth_maul.png');
 
 CREATE TABLE IF NOT EXISTS droid(
     id INT NOT NULL AUTO_INCREMENT,
@@ -78,7 +84,8 @@ CREATE TABLE IF NOT EXISTS droid(
     CONSTRAINT PK_droid PRIMARY KEY(id)
 );
 
-INSERT INTO droid(name,homeworld,creator,model,class,image) VALUES('R2-D2','Naboo','Ismeretlen','R2 sorozatú astromech droid','Astromech droid','r2-d2.png');
+INSERT INTO droid(name,homeworld,creator,model,class,image) VALUES('R2-D2','Naboo','Unknown','R2 series astromech droid','Astromech droid','r2-d2.png');
+INSERT INTO droid(name,homeworld,creator,model,class,image) VALUES('C-3PO','Tatooine','Anakin Skywalker','3PO unit','Protocol droid','c-3po.jpg');
 
 CREATE TABLE IF NOT EXISTS planets(
     id INT NOT NULL AUTO_INCREMENT,
@@ -92,6 +99,7 @@ CREATE TABLE IF NOT EXISTS planets(
 );
 
 INSERT INTO planets(name,regio,sector,system,image) VALUES('Coruscant','Core Worlds','Coruscant subsector, Corusca sector', 'Coruscant system','coruscant.png');
+INSERT INTO planets(name,regio,sector,system,image) VALUES('Naboo','Mid Rim','Chommel sector, Corusca sector', 'Naboo system','naboo.png');
 
 CREATE TABLE IF NOT EXISTS weapons(
     id INT NOT NULL AUTO_INCREMENT,
@@ -102,17 +110,8 @@ CREATE TABLE IF NOT EXISTS weapons(
     CONSTRAINT PK_weapons PRIMARY KEY(id)
 );
 
-INSERT INTO weapons(name,type,image) VALUES('Lézerkard','Melee weapon','lightsaber.jpg');
-
-CREATE TABLE IF NOT EXISTS vehicles(
-    id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(250) NOT NULL,
-    model VARCHAR(250) NOT NULL,
-    class VARCHAR(250) NOT NULL,
-    image VARCHAR(250) NOT NULL,
-
-    CONSTRAINT PK_vehicles PRIMARY KEY(id)
-);
+INSERT INTO weapons(name,type,image) VALUES('Lightsaber','Melee weapon','lightsaber.jpg');
+INSERT INTO weapons(name,type,image) VALUES('DL-44 Heavy Blaster Pistol','Heavy Blaster Pistol','dl-44-heavy-blaster-pistol.png');
 
 CREATE TABLE IF NOT EXISTS species(
     id INT NOT NULL AUTO_INCREMENT,
@@ -125,7 +124,9 @@ CREATE TABLE IF NOT EXISTS species(
     CONSTRAINT PK_species PRIMARY KEY(id)
 );
 
-INSERT INTO species(name,homeworld,species,gender,image) VALUES('Chewbacca','Kashyyyk','Wookiee','Hím','chewbacca.jpg');
+INSERT INTO species(name,homeworld,species,gender,image) VALUES('Chewbacca','Kashyyyk','Wookiee','Male','chewbacca.jpg');
+INSERT INTO species(name,homeworld,species,gender,image) VALUES('Jar Jar Binks','Naboo','Gungan','Male','jar_jar_binks.jpg');
+INSERT INTO species(name,homeworld,species,gender,image) VALUES('Jabba','Nal Hutta','Hutt','Male','jabba.png');
 
 CREATE TABLE IF NOT EXISTS senators(
     id INT NOT NULL AUTO_INCREMENT,
@@ -139,6 +140,7 @@ CREATE TABLE IF NOT EXISTS senators(
 );
 
 INSERT INTO senators(name,homeworld,species,gender,image) VALUES('Padmé Amidala','Naboo','Human','Female','padme_amidala.png');
+INSERT INTO senators(name,homeworld,species,gender,image) VALUES('Bail Organa','Alderaan','Human','Male','bail_organa.jpg');
 
 CREATE TABLE IF NOT EXISTS games(
     id INT NOT NULL AUTO_INCREMENT,
@@ -154,6 +156,7 @@ CREATE TABLE IF NOT EXISTS games(
 );
 
 INSERT INTO games(name,developers,publishers,release_date,models,platforms,image) VALUES('Star Wars Arcade','Atari Inc.','Atari Inc., Parker Brothers, Domark, Broderbund','May 1983','Single-Player','Arcade','star_wars_arcade_game.png');
+INSERT INTO games(name,developers,publishers,release_date,models,platforms,image) VALUES('Star Wars Arcade','Namco','Namco','Dec 4, 1987','Single-Player','Family computer/NES','star_wars_namco.jpg');
 
 CREATE TABLE IF NOT EXISTS films(
     id INT NOT NULL AUTO_INCREMENT,
@@ -165,6 +168,11 @@ CREATE TABLE IF NOT EXISTS films(
 );
 
 INSERT INTO films(title,release_date,image) VALUES('Star Wars: A New Hope','May 25, 1977','a_new_hope.jpg');
+INSERT INTO films(title,release_date,image) VALUES('Star Wars: Empire Strikes Back','May 17, 1980','empire_strikes_back.jpg');
+INSERT INTO films(title,release_date,image) VALUES('Star Wars: Return of The Jedi','May 25, 1983','return_of_the_jedi.jpg');
+INSERT INTO films(title,release_date,image) VALUES('Star Wars: Phantom Menace','May 16, 1999','phantom_menace.jpg');
+INSERT INTO films(title,release_date,image) VALUES('Star Wars: Attack of The Clones','May 12, 2002','attack_of_the_clones.jpg');
+INSERT INTO films(title,release_date,image) VALUES('Star Wars: Revenge of The Sith','May 15, 2005','revenge_of_the_sith.jpg');
 
 CREATE TABLE IF NOT EXISTS series(
     id INT NOT NULL AUTO_INCREMENT,
@@ -176,6 +184,7 @@ CREATE TABLE IF NOT EXISTS series(
 );
 
 INSERT INTO series(title,release_date,image) VALUES('Star Wars: Droids','Sep 7,1985','star_wars_droids');
+INSERT INTO series(title,release_date,image) VALUES('Star Wars: Ewoks','Sep 7,1985','ewoks.jpg');
 
 CREATE TABLE IF NOT EXISTS clone(
     id INT NOT NULL AUTO_INCREMENT,
@@ -190,6 +199,7 @@ CREATE TABLE IF NOT EXISTS clone(
 );
 
 INSERT INTO clone(name, homeworld,species,gender,rank,image) VALUES('Rex','Kamino','Human','Male','Captain Commander','rex.png');
+INSERT INTO clone(name, homeworld,species,gender,rank,image) VALUES('Cody','Kamino','Human','Male','Commander','cody.jpeg');
 
 CREATE TABLE IF NOT EXISTS mandalorians(
     id INT NOT NULL AUTO_INCREMENT,
@@ -203,3 +213,4 @@ CREATE TABLE IF NOT EXISTS mandalorians(
 );
 
 INSERT INTO mandalorians(name,homeworld,species,gender,image) VALUES('Ursa Wren','Krownest','Human','Female','ursa_wren.png');
+INSERT INTO mandalorians(name,homeworld,species,gender,image) VALUES('Sabine Wren','Krownest','Human','Female','Sabine.png');
