@@ -1,19 +1,34 @@
 1. A rendszer céljai és nem céljai
-A cél egy olyan weboldal létrehozása, ahol az emberek információkat találnak a Star Wars univerzumában található élőlényekről, bolygókról, űrhajókról és fegyverek ről, valamint a filmekről és a sorozatokról. Mind ezek mellett pedig egy listát is találhatnak az eddig megjelent játékokról. Az emberek szerkeszthetik ezeket az adatokat, módosíthatják, illetve törölhetik is, valamint újabb adatokat is adhatnak meg, amelyek még nem szerepelnek az oldalon. Viszont a filmekhez és a sorozatokhoz kapcsolódó információkat nem változtathatják meg.
+A cél egy olyan weboldal létrehozása, ahol az emberek információkat találnak a Star Wars univerzumában található élőlényekről, bolygókról, 
+űrhajókról és fegyverek ről, valamint a filmekről és a sorozatokról. Mind ezek mellett pedig egy listát is találhatnak az eddig megjelent 
+játékokról. Az emberek szerkeszthetik ezeket az adatokat, módosíthatják, illetve törölhetik is, valamint újabb adatokat is adhatnak meg, 
+amelyek még nem szerepelnek az oldalon.
 2. Jelenlegi helyzet leírása
-Manapság a Star Wars egy hatalmas univerzum, ami egy hatalmas rajongó táborral rendelkezik. A világ minden részén vannak Star Wars rajongók, akik közül vannak fanatikusak és kevésbé fanatikusak. A Star Wars filmek 1977-től kezdtek megjelenni és így a Star Wars elindult hódító útjára. Azóta rengeteg játék, animációs film és sorozat jelent meg, ezekkel is bővítve az univerzumot. Jelenlegi munkában a célom az, hogy egy olyan weboldalt készítsek, ami a Star Wars univerzum lényeit, űrhajóit és bolygóit mutassa be. Mind ezek mellett pedig a filmekről és sorozatokról egy kis rövid leírást tartalmazzon, valamint egy listában szerepeltesse a megjelent játékokat is.
+Manapság a Star Wars egy hatalmas univerzum, ami egy hatalmas rajongó táborral rendelkezik. A világ minden részén vannak Star Wars 
+rajongók, akik közül vannak fanatikusak és kevésbé fanatikusak. A Star Wars filmek 1977-től kezdtek megjelenni és így a Star Wars elindult 
+hódító útjára. Azóta rengeteg játék, animációs film és sorozat jelent meg, ezekkel is bővítve az univerzumot. Jelenlegi munkában a célom 
+az, hogy egy olyan weboldalt készítsek, ami a Star Wars univerzum lényeit, űrhajóit és bolygóit mutassa be. Mindezek mellett pedig az 
+eddig mehjelent filmeket, sorozatokat és játékokat lista szerűen legyenek fel sorova.
 3. Vágyálom rendszer leírása
-A cél egy olyan weboldal készítése, amely feltünteti a Star Wars univerzum összes élőlényét, bolygóját és űrhajóit, valamint a különböző fegyvereket is. Mind ezek mellett pedig még az, hogy rövid leírást adjon a filmekről és sorozatokról. Valamint még az, hogy lista szerűen felsorolja az eddig megjelent játékokat. Minden képen úgy kell elkészíteni az oldalt, hogy a létrehozott élőlények, bolygók, űrhajók és fegyverek táblákban lehessen új adatokat fel vinni, valamint ezeket a táblákat lehessen módosítani, például ha rossz adatokat adtunk meg, illetve törölni adatokat, például ha az élőlények táblában egy olyan élőlény adatait adtuk meg, ami nem is létezik a Star Wars univerzumában. Ezek mellett pedig létrehozni ezeknek a tábláknak külön-külön a listázó oldalát, ahol fel legyenek tüntetve az adatok. A táblákban az minden adathoz legyen egy kép, valamint egy dokumentum, ami az adott dolog általános leírását tartalmazza. A módosításnál legyenek módosíthatók a képek és a dokumentumok is. Minden oldalon legyen egy menü rendszer. A főoldal tartalmazza az egész oldal általános leírását. A külön oldalak legyenek a filmekről és a sorozatokról, amelyek tartalmazzanak rövid leírásokat a filmekről és a sorozatokról, képekkel.
+A cél egy olyan weboldal készítése, amely feltünteti a Star Wars univerzum összes élőlényét, bolygóját és űrhajóit, valamint a különböző 
+fegyvereket is. Valamint még az, hogy lista szerűen felsorolja az eddig megjelent filmeket,sorozatokat és játékokat. Minden képen úgy kell 
+elkészíteni az oldalt, hogy a létrehozott élőlények, bolygók, űrhajók és fegyverek táblákban lehessen új adatokat fel vinni, valamint 
+ezeket a táblákat lehessen módosítani, például ha rossz adatokat adtunk meg, illetve törölni adatokat, például ha az élőlények táblában 
+egy olyan élőlény adatait adtuk meg, ami nem is létezik a Star Wars univerzumában. Ezek mellett pedig létrehozni ezeknek a tábláknak 
+külön-külön a listázó oldalát, ahol fel legyenek tüntetve az adatok. A táblákban a minden adathoz legyen egy kép.Minden oldalon legyen egy 
+menü rendszer.
 4. Jelenlegi üzleti folyamatok modellje
-Egy olyan weboldal készítése, amely a Star Wars univerzumával kapcsolatos információk vannak. Az emberek tudják új adatokkal bővíteni az élőlények, bolygók, űrhajók és a fegyverek listáját. Tudják ezeket az adatokat módosítani, törölni és listázni. Ehhez először el kell készíteni adatbázist a szerveren, majd ebben az adatbázisban létrehozni a táblákat, melyekhez megírom a beszúrás, módosítás, törlés és a listázás függvényeket. Majd ezt követően létrehozom a weboldal többi részét, melyeket az emberek már nem módosíthatnak. Ugyanis ezeken a weboldalakon információk lesznek a filmekkel és a sorozatokkal kapcsolatban. Plusz kell majd még egy tábla az adatbázisban, ami fogja tartalmazni az eddig megjelent játékok listáját, ezt is szerkeszthetik az emberek.
+Egy olyan weboldal készítése, amely a Star Wars univerzumával kapcsolatos információk vannak. Az emberek tudják új adatokkal bővíteni az 
+élőlények, bolygók, űrhajók és a fegyverek listáját. Tudják ezeket az adatokat módosítani, törölni és listázni. Ehhez először el kell 
+készíteni adatbázist a szerveren, majd ebben az adatbázisban létrehozni a táblákat, melyekhez megírom a beszúrás, módosítás, törlés és a 
+listázás függvényeket.
 5. Igényelt üzleti folyamatok modellje
 Egy weboldal készítése, amely információkat tartalmaz a Star Wars világáról. A weboldal megfelel a leírt követelményeknek.
 6. Követelménylista
 -adatbázis létre hozása a szerver oldalon
 -adatbázisban létrehozni a táblákat
--az élőlényeket szét bontani fajok szerint
--a fegyvereket szét bontani típusok szerint
--az űrhajókat szét bontani típusok szerint
--létrehozni az információs oldalakat
-7. Fogalomszótár
-A fejlesztés során folyamatosan bővülni fog ...
+-regisztrációs felület
+-bejelentkezési felület
+-kijelentkezés
+-hivatkozások létrehozása
+-menürendszer
